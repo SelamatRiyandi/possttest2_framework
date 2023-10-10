@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\klien;
 
-class klien extends Controller
+class controllerklien extends Controller
 {
     /**
      * Display a listing of the resource.
