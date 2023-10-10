@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('kategori', function (Blueprint $table){
             $table->id();
             $table->integer('Biaya');
-            $table->string('Fasilitas');
         });
     }
 

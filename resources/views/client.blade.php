@@ -8,7 +8,7 @@
         Kami ingin mengucapkan terima kasih yang tulus kepada semua klien kami yang telah memilih Ionix sebagai mitra dalam menjaga kesehatan mereka. Setiap nama dalam daftar ini adalah cerminan dari kepercayaan yang diberikan kepada kami untuk memberikan perlindungan kesehatan yang berkualitas tinggi, pelayanan yang berorientasi pada kebutuhan, dan komitmen kami untuk selalu berada di samping Anda dalam setiap langkah perjalanan kesehatan Anda.
     </p>
 </div>
-    <table class="ctable">
+    {{-- <table class="ctable">
         <thead style="border-radius: 10px">
             <tr>
                 <th scope="col">ID</th>
@@ -61,6 +61,32 @@
                 <td>Kategori III</td>
             </tr>
         </tbody>
-    </table>
-    </div>
+
+    </table> --}}
+    <table class="ctable">
+    <thead style="border-radius: 10px">
+        <tr>
+            <th></th>
+            <th>NIK</th>
+            <th>Nama</th>
+            <th>Tanggal_Lahir</th>
+            <th>Gender</th>
+            <th>Opsi AKsi</th>
+        </tr>
+    </thead>
+    @foreach ($posting as $p)
+    <tbody>
+        <tr>
+            <td>{{ $p -> NIK}}</td>
+            <td>{{ $p -> Nama}}</td>
+            <td>{{ $p -> Tanggal_Lahir}}</td>
+            <td>{{ $p -> Gender}}</td>
+            <td>
+                <a href="">Edit</a>
+                <a href="">Hapus</a>
+            </td>
+
+        </tr>
+    </tbody>
+    {{-- </div> --}}
 @endsection
