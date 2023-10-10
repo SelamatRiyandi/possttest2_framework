@@ -22,8 +22,9 @@
             <th>Opsi AKsi</th>
         </tr>
     </thead>
-    @foreach ($posting as $p)
+    
     <tbody>
+        @foreach ($posting as $p)
         <tr>
             <td>{{ $p -> NIK}}</td>
             <td>{{ $p -> Nama}}</td>
@@ -35,7 +36,8 @@
             </td>
 
         </tr>
+        @endforeach
     </tbody>
-    @endforeach
+    
 </table>
 @endsection
