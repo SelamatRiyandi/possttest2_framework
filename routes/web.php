@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\klien;
+use App\Http\Controllers\controllerklien;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +25,5 @@ Route::get('/client', function () {
 Route::get('/testimonial', function () {
     return view('testimonial');
 });
+
+Route::get('/client',[controllerklien::class, 'index']);

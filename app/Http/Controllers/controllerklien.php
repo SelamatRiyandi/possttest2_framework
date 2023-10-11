@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
 
+namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Model\klien;
+// use App\Model\klien;
+use App\Http\klien;
+use Illuminate\Support\Facades\DB;
 
 class controllerklien extends Controller
 {
@@ -18,7 +20,7 @@ class controllerklien extends Controller
         // $posting = Post::all();
 
 
-        return view('index',['posting' => $posting]);
+        return view('client',['posting' => $posting]);
     }
 
     /**

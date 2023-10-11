@@ -14,7 +14,6 @@
 <table class="ctable">
     <thead style="border-radius: 10px">
         <tr>
-            <th></th>
             <th>NIK</th>
             <th>Nama</th>
             <th>Tanggal_Lahir</th>
