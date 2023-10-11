@@ -26,4 +26,8 @@ Route::get('/testimonial', function () {
     return view('testimonial');
 });
 
+Route::get('/addclient', function () {
+    return view('addclient');
+});
+
 Route::get('/client',[controllerklien::class, 'index']);
