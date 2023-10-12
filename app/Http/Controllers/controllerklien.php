@@ -3,8 +3,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-// use App\Model\klien;
-use App\Http\klien;
+use App\Model\klien;
+// use App\Http\klien;
 use Illuminate\Support\Facades\DB;
 
 class controllerklien extends Controller
@@ -14,11 +14,8 @@ class controllerklien extends Controller
      */
     public function index()
     {
-        //mengambil data dari tabel post
-        // $user = "SELECT * FROM post";
-        $posting = DB::table('klien')->get();
-        // $posting = Post::all();
 
+        $posting = DB::table('klien')->get();
 
         return view('client',['posting' => $posting]);
     }
@@ -28,7 +25,7 @@ class controllerklien extends Controller
      */
     public function create()
     {
-        // return view('tambahpost');
+        return view('addclient');
     }
 
     /**
@@ -36,13 +33,16 @@ class controllerklien extends Controller
      */
     public function store(Request $request)
     {
-        // DB::table("klien")->insert([
-        //     'image' => "",
-        //     'judul' => $request->judul,
-        //     'content' => $request->content
-        // ]);
+        DB::table("klien")->insert([
+            'NIK' => $request->NIK,
+            'Nama' => $request->Nama,
+            'Tanggal_Lahir' => $request->Tanggal_Lahir,
+            'Gender' => $request->Gender,
+            'Kategori' => $request->Kategori,
+        ]);
 
-        return redirect('/index');
+        return redirect('/client');
+
     }
 
     /**

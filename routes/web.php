@@ -21,13 +21,17 @@ Route::get('/', function () {
 Route::get('/client', function () {
     return view('client');
 });
+Route::get('/addclient', function () {
+    return view('addclient');
+});
 
 Route::get('/testimonial', function () {
     return view('testimonial');
 });
 
-Route::get('/addclient', function () {
-    return view('addclient');
-});
 
+// menampilkan
 Route::get('/client',[controllerklien::class, 'index']);
+
+// menyimpan
+Route::post('/addclient/store',[controllerklien::class,'store']);

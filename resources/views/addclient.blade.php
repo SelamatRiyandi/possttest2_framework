@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container">
-    <form class="form" action="/tambahpost/store" method="post">
+    <form class="form" action="/addclient/store" method="post">
         {{ csrf_field() }}
         NIK :
         <input type="text" name="NIK"><br>
@@ -18,6 +18,19 @@
         <br>
         <label>
             <input type="radio" name="Gender" value="P"> Perempuan
+        </label>
+
+        Kategori :
+        <label>
+            <input type="radio" name="Kategori" value="1"> Laki-laki
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="Kategori" value="2"> Perempuan
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="Kategori" value="3"> Perempuan
         </label>
         
         <br>
